@@ -1,52 +1,52 @@
-import imgOne from './images/1.png';
-import imgTwo from './images/2.png';
-import imgThree from './images/3.png';
-import imgFour from './images/4.png';
-import imgFive from './images/5.png';
-import imgSix from './images/6.png';
+import imgOne from './images/1.jpg';
+import imgTwo from './images/2.jpg';
+import imgThree from './images/3.jpg';
+import imgFour from './images/4.jpg';
+import imgFive from './images/5.jpg';
+import imgSix from './images/6.jpg';
 
 const data = {
     products: [
         {
             id: 1,
             img: imgOne,
-            title: 'Product One',
-            desc: '',
-            price: 80,
+            title: 'Conchiglie di Salmone',
+            desc: 'Pasta di conchiglie con bechamel di zucca e salmone affumicato, grana padano e coriandolo.',
+            price: 13,
         },
         {
             id: 2,
             img: imgTwo,
-            title: 'Product Two',
-            desc: '',
-            price: 85,
+            title: 'Melanzane alla Parmigiana',
+            desc: 'Lasagna di melanzane, pomodoro, mozzarella fior di latte, parmigiano e origano.',
+            price: 11,
         },
         {
             id: 3,
             img: imgThree,
-            title: 'Product Three',
-            desc: '',
+            title: 'Pizza DAngelo',
+            desc: 'Besciamella allo zenzero con pomodoro e crema di formaggio, mozzarella fior di latte, e basilico.',
             price: 65,
         },
         {
             id: 4,
             img: imgFour,
-            title: 'Product Four',
-            desc: '',
-            price: 70,
+            title: 'Marchese Di Cioccolato',
+            desc: 'Torta di cioccolato e fragola.',
+            price: 7,
         },
         {
             id: 5,
             img: imgFive,
-            title: 'Product Five',
-            desc: '',
-            price: 75,
+            title: 'Duchessa Di Fragole',
+            desc: 'Torta di fragola, latte condensato e crema di formaggio.',
+            price: 6,
         },
         {
             id: 6,
             img: imgSix,
-            title: 'Product Six',
-            desc: '',
+            title: 'Cheesecake Roquefort',
+            desc: 'Cheesecake Roquefort, miele e noci.',
             price: 90,
         },
 
