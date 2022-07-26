@@ -38,15 +38,15 @@ const data = {
         {
             id: 5,
             img: imgFive,
-            title: 'Duchessa Di Fragole',
+            title: 'Duchessa di Fragole',
             desc: 'Torta di fragola, latte condensato e crema di formaggio.',
             price: 6,
         },
         {
             id: 6,
             img: imgSix,
-            title: 'Cheesecake Roquefort',
-            desc: 'Cheesecake Roquefort, miele e noci.',
+            title: 'Cheesecake di Roquefort',
+            desc: 'Cheesecake di Roquefort, miele e noci.',
             price: 90,
         },
 
