@@ -9,7 +9,7 @@ const Home = () => {
             <div className="row">
                 {data.products.map((item,index) => {
                     return ( 
-                    <Cards img={item.img} title={item.title} desc={item.desc} price={item.price} key={index} />
+                    <Cards img={item.img} title={item.title} desc={item.desc} price={item.price} item={item} key={index} />
                     )
                 })}
                

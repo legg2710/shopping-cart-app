@@ -1,8 +1,12 @@
+import "./Cards.css";
+import {useCart} from 'react-use-cart';
+
 const Cards = (props) => {
+    const {addItem} = useCart();
     return (
         <>
            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
-                <card className="card h-100 shadow">
+                <card className="card h-100 shadow rounded">
                     <img src={props.img} alt="" className="card img-top img-fluid" />
                     <div className="card-body">
                         <div className= "d-flex justify-content-between">
@@ -13,7 +17,7 @@ const Cards = (props) => {
                             <p className="card-text">{props.desc}</p>
                         </div>
                         <div className="d-grid justify-content-end mt-4">
-                            <button className="btn btn-sm btn-outline-success">Aggiungi al carrello</button>
+                            <button className="btn btn-sm btn-outline-success" onClick={() => addItem (props.item)} >Aggiungi al carrello</button>
                         </div>    
                     </div>
                 </card>
