@@ -7,7 +7,7 @@ const Cards = (props) => {
                     <card className="body">
                         <h5 className="card-title">{props.title}</h5>
                         <p className="card-text">{props.desc}</p>
-                        <button className="btn btn-success">Agregar al carrito</button>
+                        <button className="btn btn-success">Aggiungi al carrello</button>
                     </card>
                 </card>
            </div>
