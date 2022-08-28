@@ -18,13 +18,13 @@ const Cart = () => {
         <div className='container-fluid py-5'>
             <div className="row">
                 <h4 className="text-center py-3 text-decoration-underline">La Mia Carta</h4>
-                <div className="col-12 py-4 shadow">
+                <div className="col-12 py-4">
                     <div className="d-flex justify-content-center py-3">
                         <p className='position-relative fw-bolder text-title'>Carrello <span className="position-absolute translate-middle rounded-pill badge bg-danger mx-1">{totalUniqueItems}</span></p>
                         <p className='fw-bolder text-title'>Totale Articoli <span className="position-absolute translate-middle rounded-pill badge bg-success mx-1">{totalItems}</span></p>
                     </div>
                     <div>
-                      <table className="table table-primary table-hover m0">
+                      <table className="table table-light table-hover m0">
                         <tbody>
                             {items.map((item, index) => {
                               return(
@@ -33,6 +33,11 @@ const Cart = () => {
                                       <td> {item.title}</td>
                                       <td>$ {item.price}</td>
                                       <td>Quantità: {item.quantity}</td>
+                                      <td>
+                                          <button className='btn btn-outline dark mx-1'>-</button>
+                                          <button className='btn btn-outline dark mx-1'>+</button>
+                                          <button className='btn btn-outline danger mx-1'>Rimuovi Oggetto</button>
+                                      </td>
                                   </tr>
                               )
                             })}
