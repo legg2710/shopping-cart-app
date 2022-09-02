@@ -23,26 +23,30 @@ const Cart = () => {
                         <p className='position-relative fw-bolder text-title'>Carrello <span className="postition-absolute translate-middle rounded-pill badge bg-danger mx-1">{totalUniqueItems}</span></p>
                         <p className='fw-bolder text-title'>Totale Articoli <span className="postition-absolute translate-middle rounded-pill badge bg-success mx-1">{totalItems}</span></p>
                     </div>
-                    <div className=''>
+                    <div>
                       <table className="table table-light table-hover m0">
                         <tbody>
                             {items.map((item, index) => {
                               return(
-                                  <tr key={index}>
+                                  <tr key={index} className='align-middle'>
                                       <td><img src={item.img} className='img-cart' alt={item.title} /></td>
                                       <td> {item.title}</td>
                                       <td>$ {item.price}</td>
                                       <td>Quantità: {item.quantity}</td>
                                       <td>
-                                          <button className='btn btn-outline-dark ms-1'>-</button>
-                                          <button className='btn btn-outline-dark ms-1'>+</button>
-                                          <button className='btn btn-outline-danger ms-5'>Rimuovi Oggetto</button>
+                                          <button onClick={() => updateItemQuantity(item.id, item.quantity-1)} className='btn btn-outline-dark ms-1'>-</button>
+                                          <button onClick={() => updateItemQuantity(item.id, item.quantity+1)} className='btn btn-outline-dark ms-1'>+</button>
+                                          <button onClick={() => removeItem(item.id)} className='btn btn-outline-danger ms-5'>Rimuovi Oggetto</button>
                                       </td>
                                   </tr>
                               )
                             })}
                         </tbody>
                       </table>
+                    </div>
+                    <div className="d-flex justify-content-between py-5">
+                        <button onClick={() => emptyCart()} className="btn btn-outline-danger">Carrello Vuoto</button>
+                        <h3>Prezzo Totale: ${cartTotal}</h3>
                     </div>
               </div>
           </div>
