@@ -13,15 +13,15 @@ const Cart = () => {
         removeItem,
         emptyCart,
     } = useCart();
-    if(isEmpty) return <h5 className='text-center py-3'>Il mio carrello è vuoto. </h5>
+    if(isEmpty) return <h5 className='body text-center py-3'>Il mio carrello è vuoto. </h5>
     return (
-        <div className='container-fluid py-5'>
-            <div className="row justify-content-center">
-                <h4 className="text-center py-3 text-decoration-underline">La Mia Carta</h4>
+        <div className='body container-fluid py-5'>
+            <div className="body row justify-content-center">
+                <h4 className="text text-center py-3 text-decoration-underline">La Mia Carta</h4>
                 <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 py-4">
                     <div className="d-flex justify-content-center py-3">
-                        <p className='position-relative fw-bolder text-title'>Carrello <span className="postition-absolute translate-middle rounded-pill badge bg-danger mx-1">{totalUniqueItems}</span></p>
-                        <p className='fw-bolder text-title'>Totale Articoli <span className="postition-absolute translate-middle rounded-pill badge bg-success mx-1">{totalItems}</span></p>
+                        <p className='text-second position-relative fw-bolder text-title'>Carrello <span className="postition-absolute translate-middle rounded-pill badge bg-danger mx-1">{totalUniqueItems}</span></p>
+                        <p className='text-second fw-bolder text-title'>Totale Articoli <span className="postition-absolute translate-middle rounded-pill badge bg-success mx-1">{totalItems}</span></p>
                     </div>
                     <div>
                       <table className="table table-light table-hover m0">

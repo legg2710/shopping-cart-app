@@ -5,9 +5,9 @@ const Cards = (props) => {
     const {addItem} = useCart();
     return (
         <>
-           <div className="body col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
-                <card className="body card h-100 shadow rounded">
-                    <img src={props.img} alt="" className="card img-top img-fluid" />
+           <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4">
+                <card className="body card rounded">
+                    <img src={props.img} alt="" className="card img-top img-fluid img-fit " />
                     <div className="card-body">
                         <div className= "d-flex justify-content-between">
                             <h5 className="text card-title">{props.title}</h5>
