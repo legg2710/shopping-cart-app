@@ -23,12 +23,12 @@ const Cart = () => {
                         <p className='text-second position-relative fw-bolder text-title'>Carrello <span className="postition-absolute translate-middle rounded-pill badge bg-danger mx-1">{totalUniqueItems}</span></p>
                         <p className='text-second fw-bolder text-title'>Totale Articoli <span className="postition-absolute translate-middle rounded-pill badge bg-success mx-1">{totalItems}</span></p>
                     </div>
-                    <div>
+                    <div className="body">
                       <table className="table table-light table-hover m0">
                         <tbody>
                             {items.map((item, index) => {
                               return(
-                                  <tr key={index} className='align-middle'>
+                                  <tr key={index} className='body align-middle'>
                                       <td><img src={item.img} className='img-cart' alt={item.title} /></td>
                                       <td> {item.title}</td>
                                       <td>$ {item.price}</td>
