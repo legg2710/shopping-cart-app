@@ -2,3 +2,18 @@
  width: 100px;
  height: auto;
 }
+.body {
+   background-color: #0D0D0D;;
+}
+.text {
+    color: #977a4b;
+}
+.text-second {
+    color: #cacaca;
+}
+.text-thrd {
+    color: #685331;;
+}
+.body-second {
+    color: #444444;
+}
