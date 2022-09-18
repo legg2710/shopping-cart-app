@@ -24,7 +24,7 @@ const Cart = () => {
                         <p className='text-second fw-bolder text-title'>Totale Articoli <span className="postition-absolute translate-middle rounded-pill badge bg-success mx-1">{totalItems}</span></p>
                     </div>
                     <div className="body">
-                      <table className="table table-light table-hover m0">
+                      <table className="table table-dark table-hover m0">
                         <tbody>
                             {items.map((item, index) => {
                               return(
@@ -46,7 +46,7 @@ const Cart = () => {
                     </div>
                     <div className="d-flex justify-content-between py-5">
                         <button onClick={() => emptyCart()} className="btn btn-outline-danger">Carrello Vuoto</button>
-                        <h3>Prezzo Totale: ${cartTotal}</h3>
+                        <h3 className="text-second">Prezzo Totale: ${cartTotal}</h3>
                     </div>
               </div>
           </div>
