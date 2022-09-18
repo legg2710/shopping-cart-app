@@ -17,6 +17,28 @@ body {
 
 }
 
+.site-title {
+    font-size: 2rem;
+    color: #977a4b;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
 .nav a {
     color: inherit;
+    text-decoration: none;
+}
+
+.nav li.active {
+    color: #977a4b;
+}
+
+.nav li:hover {
+    color: #977a4b;
 }
