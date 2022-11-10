@@ -6,7 +6,7 @@ import { CartProvider } from 'react-use-cart';
 import Navbar from './components/Navbar';
 import Menu from './pages/Menu';
 import Contacto from './pages/Contacto';
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
