@@ -6,6 +6,7 @@ import { CartProvider } from 'react-use-cart';
 import Navbar from './components/Navbar';
 import Menu from './pages/Menu';
 import Contacto from './pages/Contacto';
+import SignUp from './components/Signup';
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<Home />}/>  
           <Route path='/menu' element={<Menu />}/>  
           <Route path='/contacto' element={<Contacto />}/>  
+          <Route path='/signup' element={<SignUp />}/>  
         </Routes>  
       </div>
    

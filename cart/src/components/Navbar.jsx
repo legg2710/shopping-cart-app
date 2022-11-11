@@ -7,8 +7,9 @@ export default function Navbar() {
                 Il Bagliore
             </Link>
             <ul>
-                <CustomLink to="/menu">Menù</CustomLink>
-                <CustomLink to="/contacto">Contattaci</CustomLink>
+                <CustomLink to="/menu">Menu</CustomLink>
+                <CustomLink to="/contacto">Contact</CustomLink>
+                <CustomLink to="/contacto">Sign Up</CustomLink>
             </ul>
         </nav>
     )

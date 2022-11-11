@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
-import Authpp from './Components/AuthppApp'
+import Authpp from './components/Authpp'
 import "./styles.css"
 import { BrowserRouter } from "react-router-dom"
 
