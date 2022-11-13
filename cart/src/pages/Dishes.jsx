@@ -1,10 +1,10 @@
 import Cards from '../components/Cards';
 import data from '../backend/Data';
-import './Piatti.css';
-const Piatti = () => {
+import './Dishes.css';
+const Dishes = () => {
     return (
         <div className='body container-fluid py-20px'>
-           <h3 className= 'text text-center mt-5'>Piatti</h3>
+           <h3 className= 'text text-center mt-5'>Dishes</h3>
            <div className="container py-4">
             <div className="row">
                 {data.products.map((item,index) => {
@@ -20,4 +20,4 @@ const Piatti = () => {
     )
 }
 
-export default  Piatti
+export default  Dishes
