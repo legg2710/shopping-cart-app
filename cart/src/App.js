@@ -26,7 +26,6 @@ function App() {
       </>
       
       <CartProvider>
-        <Home />
         <Cart />
       </CartProvider>
      
