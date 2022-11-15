@@ -4,8 +4,8 @@ import { Form, Button, Card } from "react-bootstrap"
 export default function Signup() {
 
     const emailRef = useRef()
-    const passwordRef = passwordRef()
-    const passwordConfirmationRef = passwordConfirmationRef()
+    const passwordRef = useRef()
+    const passwordConfirmationRef = useRef()
 
   return (
     <>
