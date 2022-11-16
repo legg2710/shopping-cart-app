@@ -18,11 +18,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>  
           <Route path='/menu' element={<Menu />}/>  
-          <Route path='/contact' element={<Contact />}/>  
-          <Route path='/signup' element={<SignUp />} className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}/>
-          <div className="w-100" style= {{ maxWith: '400px' }}>
-          <SignUp/>
-        </div> 
+          <Route path='/contact' element={<Contact />}/>
+          <Route path='/signup' element={<SignUp />}/>  
         </Routes>  
       </div>
 

@@ -9,7 +9,8 @@ export default function Signup() {
 
   return (
     <>
-        <Card>
+        <Card className="d-flex align-times-center justify-content-center" style={{ minHeight: "50vh" }}>
+        <div className="w-100" style={{ maxWidth: "400px" }}>
             <Card.Body>
                 <h2 className='text-center mb-4'>Sign Up</h2>
                 <Form>
@@ -28,6 +29,8 @@ export default function Signup() {
                     <Button className="w-100" type="submit">Sign Up</Button>
                 </Form>
             </Card.Body>
+	    </div>
+
         </Card>
             <div className='w100 text-center mt-2'>
                 Already have and account? Log In
