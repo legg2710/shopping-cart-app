@@ -8,6 +8,7 @@ import Menu from './pages/Menu';
 import Contact from './pages/Contact';
 import SignUp from './components/Signup';
 import { Route, Routes } from "react-router-dom";
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
           <Route path='/' element={<Home />}/>  
           <Route path='/menu' element={<Menu />}/>  
           <Route path='/contact' element={<Contact />}/>
-          <Route path='/signup' element={<SignUp />}/>  
+          <AuthProvider>
+            <Route path='/signup' element={<SignUp />}/> 
+          </AuthProvider>
         </Routes>  
       </div>
 
@@ -28,6 +31,7 @@ function App() {
       <CartProvider>
         <Cart />
       </CartProvider>
+
 
     </div>
   );
