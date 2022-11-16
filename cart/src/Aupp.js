@@ -1,8 +1,8 @@
 import React from "react";
 import Signup from "./Signup";
 
-function Authpp() {
+function Aupp() {
     return <Signup />
 }
 
-export default Authpp
+export default Aupp
