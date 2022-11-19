@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
-import { Form, Button, Card, Container } from "react-bootstrap"
+import React, { useRef, useState } from 'react'
+import { Form, Button, Card, Container, Alert } from "react-bootstrap"
 import { useAuth } from '../contexts/AuthContext'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 export default function Signup() {
 
@@ -8,11 +9,27 @@ export default function Signup() {
     const passwordRef = useRef()
     const passwordConfirmationRef = useRef()
     const {signup} = useAuth()
+    const [error, setError] = useState ("")
+    const [loading, setLoading] = useState(false)
 
-    function handlesubmint(e) {
+    async function handlesubmint(e) {
         e.preventDefault()
 
-        signup(emailRef.current.value, passwordRef.current.value)
+        if (passwordRef.current.value !==
+            passwordConfirmationRef.current.value) {
+                return setError('Passwords do not match')
+            }
+            
+            try {
+                setError("")
+                setLoadiong(true)
+                await signup(emailRef.current.value, passwordRef.current.value)
+            }   catch {
+                setError('Failed to create an account')
+            }
+                
+
+            setLoading(false)
     }
 
   return (
@@ -23,7 +40,8 @@ export default function Signup() {
                 <Card className='body'>    
                     <Card.Body>
                         <h2 className='text-second text-center mb-4'>Sign Up</h2>
-                        <Form>
+                        {error && <Alert variant="danger">{error}</Alert>}
+                        <Form onSubmit={handleSubmit}>
                             <Form.Group id="email">
                                 <Form.Label className='text-second'>Email</Form.Label>
                                 <Form.Control type="email" ref={emailRef} required/>
@@ -36,7 +54,7 @@ export default function Signup() {
                                 <Form.Label className='text-second'>Password Confirmation</Form.Label>
                                 <Form.Control type="password" ref={passwordConfirmationRef} required/>
                             </Form.Group>
-                            <Button className="body text-second btn btn-sm btn-outline-success w-100 mt-4" type="submit">Sign Up</Button>
+                            <Button disabled={loading} className="body text-second btn btn-sm btn-outline-success w-100 mt-4" type="submit">Sign Up</Button>
                         </Form>
                     </Card.Body>
                 </Card>
