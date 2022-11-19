@@ -12,7 +12,7 @@ export default function Signup() {
     const [error, setError] = useState ("")
     const [loading, setLoading] = useState(false)
 
-    async function handlesubmint(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
 
         if (passwordRef.current.value !==
@@ -22,7 +22,7 @@ export default function Signup() {
             
             try {
                 setError("")
-                setLoadiong(true)
+                setLoading(true)
                 await signup(emailRef.current.value, passwordRef.current.value)
             }   catch {
                 setError('Failed to create an account')
