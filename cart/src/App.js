@@ -6,9 +6,10 @@ import { CartProvider } from 'react-use-cart';
 import Navbar from './components/Navbar';
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
-import SignUp from './components/Signup';
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './contexts/AuthContext';
+import SignUp from './components/Signup';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
           <Route path='/menu' element={<Menu />}/>  
           <Route path='/contact' element={<Contact />}/>
           <AuthProvider>
-            <Route path='/signup' element={<SignUp />}/> 
+            <Switch>
+              <Route path="/signup" component={SignUp}/>
+              <Route path="/login" component={Login}/>
+            </Switch>
           </AuthProvider>
         </Routes>  
       </div>
