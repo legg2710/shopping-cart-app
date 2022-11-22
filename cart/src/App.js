@@ -6,8 +6,9 @@ import { CartProvider } from 'react-use-cart';
 import Navbar from './components/Navbar';
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
-import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './contexts/AuthContext';
+import { BrowserRouter as Routes, Route } from "react-router-dom";
+import Dashboard from './components/Dashboard';
 import SignUp from './components/Signup';
 import Login from './components/Login';
 
@@ -22,10 +23,9 @@ function App() {
           <Route path='/menu' element={<Menu />}/>  
           <Route path='/contact' element={<Contact />}/>
           <AuthProvider>
-            <Switch>
+               <Route exact path='/' component={Dashboard}/>
               <Route path="/signup" component={SignUp}/>
               <Route path="/login" component={Login}/>
-            </Switch>
           </AuthProvider>
         </Routes>  
       </div>
