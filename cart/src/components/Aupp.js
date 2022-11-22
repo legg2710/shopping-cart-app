@@ -2,9 +2,7 @@ import React from "react";
 import Signup from "./Signup";
 
 function Aupp() {
-    return (
-        <Signup />
-    )
+  return <Signup />;
 }
 
-export default Aupp
+export default Aupp;
