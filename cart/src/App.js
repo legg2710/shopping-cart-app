@@ -1,16 +1,19 @@
+import React from 'react';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import Cart from './components/Cart';
 import { CartProvider } from 'react-use-cart';
 import Navbar from './components/Navbar';
+import { NavLink } from 'react-router-dom';
+import { Switch } from "react-native";
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
 import { AuthProvider } from './contexts/AuthContext';
-import { BrowserRouter as Routes, Route } from "react-router-dom";
 import Dashboard from './components/Dashboard';
 import SignUp from './components/Signup';
 import Login from './components/Login';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -18,16 +21,19 @@ function App() {
       <>
       <Navbar />
       <div className="container">
-        <Routes>
-          <Route path='/' element={<Home />}/>  
-          <Route path='/menu' element={<Menu />}/>  
-          <Route path='/contact' element={<Contact />}/>
+        <React.Fragment>
+          <NavLink path='/' element={<Home />}/>  
+          <NavLink path='/menu' element={<Menu />}/>  
+          <NavLink path='/contact' element={<Contact />}/>
           <AuthProvider>
-               <Route exact path='/' component={Dashboard}/>
-              <Route path="/signup" component={SignUp}/>
-              <Route path="/login" component={Login}/>
+            <Switch>
+              <NavLink exact path='/' component={Dashboard}/>
+              <NavLink path="/signup" component={SignUp}/>
+              <NavLink path="/login" component={Login}/>
+            </Switch>
+
           </AuthProvider>
-        </Routes>  
+        </React.Fragment>  
       </div>
 
       </>
