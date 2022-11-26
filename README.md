@@ -1,2 +1,2 @@
 # shopping-cart-app
- Il Bagliore Ristorante
+landing page with shopping cart
